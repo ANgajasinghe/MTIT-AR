@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+	<head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs>
+			<a-assets>
+				<a-asset-item id="familie_o" src="/Model/source/Heilige_Familie_C.obj"></a-asset-item>
+				<a-asset-item id="familie_m" src="/Model/source/Heilige_Familie_C.mtl"></a-asset-item>
+			</a-assets>
+			
+			<a-marker type='pattern' url="/Marker/pattern-a.patt">
+				<a-entity obj-model="obj: #familie_o; mtl: #familie_m" position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+				<a-text value="Statue of Heilige Familie" position="-1 0 1" color="yellow">
+				<a-text value="Fernando E.P.C." position="-0.1 0 0.5" color="yellow">
+				</a-marker>
+				<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>

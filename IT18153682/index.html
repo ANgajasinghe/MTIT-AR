@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+	<head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs>
+			<a-assets>
+				<a-asset-item id="loewe_o" src="/Model/source/Loewe_C.obj"></a-asset-item>
+				<a-asset-item id="loewe_m" src="/Model/source/Loewe_C.mtl"></a-asset-item>
+			</a-assets>
+			
+			<a-marker type='pattern' url="/Marker/pattern-d.patt">
+				<a-entity obj-model="obj: #loewe_o; mtl: #loewe_m" position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+				<a-text value="Statue of Lowe" position="-1 0 1" color="yellow">
+				<a-text value="A.N.Gajasinghe" position="-0.1 0 0.5" color="yellow">
+				</a-marker>
+				<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>

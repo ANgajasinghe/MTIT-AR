@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+	<head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs>
+			<a-assets>
+				<a-asset-item id="familie_o" src="/IT18147056/Model/source/Heilige_Familie_C.obj"></a-asset-item>
+				<a-asset-item id="familie_m" src="/IT18147056/Model/source/Heilige_Familie_C.mtl"></a-asset-item>
+
+                <a-asset-item id="scan_o" src="/IT18150612/Model/source/scaniverse-20210405-135224.obj"></a-asset-item>
+				<a-asset-item id="scan_m" src="/IT18150612/Model/source/scaniverse-20210405-135224.mtl"></a-asset-item>
+
+                <a-asset-item id="hanni_o" src="/IT18151220/Model/source/Hannibal_C.obj"></a-asset-item>
+				<a-asset-item id="hanni_m" src="/IT18151220/Model/source/Hannibal_C.mtl"></a-asset-item>
+
+                <a-asset-item id="loewe_o" src="/IT18153682/Model/source/Loewe_C.obj"></a-asset-item>
+				<a-asset-item id="loewe_m" src="/IT18153682/Model/source/Loewe_C.mtl"></a-asset-item>
+			</a-assets>
+			
+			<a-marker type='pattern' url="/IT18147056/Marker/pattern-a.patt">
+				<a-entity obj-model="obj: #familie_o; mtl: #familie_m" position="-0.3 0 -1" rotation="0 60 -95" scale="0.35 0.35 0.35"></a-entity>
+            </a-marker>
+            <a-marker type='pattern' url="/IT18150612/Marker/pattern-b.patt">
+                <a-entity obj-model="obj: #scan_o; mtl: #scan_m" position="0 0 0" rotation="-90 -90 0" scale="0.05 0.05 0.05"></a-entity>
+            </a-marker>
+            <a-marker type='pattern' url="/IT18151220/Marker/pattern-c.patt">
+                <a-entity obj-model="obj: #hanni_o; mtl: #hanni_m" position="0 0 -1" rotation="-90 0 0" scale="0.3 0.3 0.3"></a-entity>
+            </a-marker>
+            <a-marker type='pattern' url="/IT18153682/Marker/pattern-d.patt">
+                <a-entity obj-model="obj: #loewe_o; mtl: #loewe_m" position="-5 0 2" rotation="-90 0 0" scale="0.2 0.2 0.2"></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
